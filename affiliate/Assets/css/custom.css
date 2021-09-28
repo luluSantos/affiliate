@@ -1,0 +1,88 @@
+.header-transparent #Top_bar .top_bar_right{
+    top:0;
+}
+
+.header-classic #Top_bar .top_bar_right {
+    top: 15px;
+}
+
+#Header_wrapper {
+    background-color: #222;
+}
+
+#Subheader {
+    background-color: #2C2C2C;
+}
+
+#Subheader .title {
+    color:#ccc;
+}
+
+#Subheader ul.breadcrumbs li, #Subheader ul.breadcrumbs li a {
+    color: #ccc;
+}
+
+#Top_bar .menu > li > a, #Top_bar .top_bar_right a {
+    color: #ffffff;
+}
+
+.header-classic #Top_bar .menu > li > a, #Top_bar .top_bar_right a {
+    color: #000;
+}
+
+#Top_bar.is-sticky .menu > li > a, #Top_bar .top_bar_right a {
+    color: #000;
+}
+
+#Top_bar .top_bar_right a.button {
+    background-color: #97cc02;
+}
+
+.flv_section {
+    background-color:#222;
+}
+
+.flv_sections_7 {
+    background-image: none;/*url(../images/how_we_work_section.jpg);*/
+}
+
+.indented-checkbox-text {
+    margin-left: 2em;
+    display: block;
+    position: relative;
+    margin-top: -1.8em; /* make this margin match whatever your line-height is */
+    line-height: 1.4em; /* can be set here, or elsewehere */
+}
+
+.code-box {
+    line-height: 0.7;
+    padding: 20px;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    font-size: 12px;
+    color: #000000;
+}
+
+#Footer {
+    background-color: #222;
+}
+
+@media only screen and (max-width: 767px) {
+    #Top_bar .menu > li > a, #Top_bar .top_bar_right a {
+        color: #000;
+    }
+    .code-box {
+        line-height: 1.0;
+        padding: 10px;
+        background: #f5f5f5;
+        border: 1px solid #e0e0e0;
+        font-size: 12px;
+        color: #000000;
+        overflow: auto;
+    }
+}
+
+
+.ignore-css {
+    all: unset;
+}

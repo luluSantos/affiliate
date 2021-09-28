@@ -1,0 +1,294 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.master.vb" Inherits="affiliate.Site1" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - MHartanah Affiliate</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <!-- CSS -->
+    <link rel='stylesheet' href='Assets/css/global.css'>
+    <link rel='stylesheet' href='Assets/css/structure.css'>
+    <link rel='stylesheet' href='Assets/css/be_style.css'>
+	<link rel='stylesheet' href='Assets/css/skins/green/stylec721.css'>
+    <link rel='stylesheet' href='Assets/css/custom.css'>
+
+</head>
+    
+<body class="contact page color-blue layout-full-width header-classic minimalist-header sticky-header sticky-black subheader-title-left">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Main Theme Wrapper -->
+        <div id="Wrapper">
+            <!-- Header Wrapper -->
+            <div id="Header_wrapper">
+                <!-- Header -->
+                <header id="Header">
+                    <!-- Header Top -  Info Area -->
+                    <div id="Action_bar">
+                        <div class="container">
+                            <div class="column one">
+                                <!-- Header - contact info area-->
+                                <ul class="contact_details">
+                                    <li class="slogan">
+                                        Have any questions?
+                                    </li>
+                                    <li class="phone">
+                                        <i class="icon-phone"></i><a href="tel:+61383766284">+61 383 766 284</a>
+                                    </li>
+                                    <li class="mail">
+                                        <i class="icon-mail-line"></i><a href="mailto:noreply@mHartanah.com">noreply@mHartanah.com</a>
+                                    </li>
+                                </ul>
+                                <!--Social info area-->
+                                <ul class="social">
+                                    <li class="skype">
+                                        <a href="#" title="Skype"><i class="icon-skype"></i></a>
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="https://www.facebook.com/Beantown-Themes-653197714728193" title="Facebook"><i class="icon-facebook"></i></a>
+                                    </li>
+                                    <li class="googleplus">
+                                        <a href="https://plus.google.com/" title="Google+"><i class="icon-gplus"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#" title="Twitter"><i class="icon-twitter"></i></a>
+                                    </li>
+                                    <li class="vimeo">
+                                        <a href="https://vimeo.com/" title="Vimeo"><i class="icon-vimeo"></i></a>
+                                    </li>
+                                    <li class="youtube">
+                                        <a href="#" title="YouTube"><i class="icon-play"></i></a>
+                                    </li>
+                                    <li class="flickr">
+                                        <a href="https://www.flickr.com/" title="Flickr"><i class="icon-flickr"></i></a>
+                                    </li>
+                                    <li class="pinterest">
+                                        <a href="https://www.pinterest.com/" title="Pinterest"><i class="icon-pinterest"></i></a>
+                                    </li>
+                                    <li class="dribbble">
+                                        <a href="https://dribbble.com" title="Dribbble"><i class="icon-dribbble"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Header -  Logo and Menu area -->
+                    <div id="Top_bar">
+                        <div class="container">
+                            <div class="column one">
+                                <div class="top_bar_left clearfix">
+                                    <!-- Logo-->
+                                    <div class="logo">
+                                        <a id="logo" href="index.html" title="MHartanah - Affiliate Program"><img class="scale-with-grid" src="Assets/images/Mhartanah-logo-without-bg.png" alt="MHartanah - Affiliate" />
+                                        </a>
+                                    </div>
+                                    <!-- Main menu-->
+                                    <div class="menu_wrapper">
+                                        <nav id="menu">
+                                            <ul id="menu-main-menu" class="menu">
+                                                <li id="menuDefault" runat="server">
+                                                    <a href="Default.aspx"><span>Home</span></a>
+                                                </li>
+                                                <li id="menuDashboard" runat="server">
+                                                    <a href="Dashboard.aspx"><span>Dashboard</span></a>
+                                                </li>
+                                                <li id="menuReferral" runat="server">
+                                                    <a href="Referral.aspx"><span>Referral</span></a>
+                                                </li>
+                                                <li id="menuPerformance" runat="server">
+                                                    <a href="Performance.aspx"><span>Performance</span></a>
+                                                </li>                                  
+                                                <li id="menuAccount" runat="server">
+                                                    <a href="Account.aspx"><span>Account</span></a>
+                                                </li>
+                                                <li id="menuContact" runat="server">
+                                                    <a href="blog-full-classic.html"><span>Contact Us</span></a>
+                                                </li>
+                                            </ul>
+                                        </nav><a class="responsive-menu-toggle" href="#"><i class="icon-menu"></i></a>
+                                    </div>
+                                </div>
+                                <div class="top_bar_right">
+                                    <div class="top_bar_right_wrapper">
+                                        <asp:LinkButton runat="server" ID="btnLogin" CssClass="button button_js" Visible="false"><span class="button_label">Sign In <i class="icon-user"></i> </span></asp:LinkButton>
+                                        <asp:LinkButton runat="server" ID="btnLogout" CssClass="button button_js" Visible="true"><span class="button_label">Sign Out <i class="icon-cancel"></i> </span></asp:LinkButton>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            
+
+            <div id="Content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+            </div>
+
+            <footer id="Footer" class="clearfix">
+                <div class="widgets_wrapper" style="padding:60px 0;">
+                    <div class="container">
+                        <div class="column one-second">
+                            <aside class="widget widget_text">
+                                <div class="textwidget">
+                                    <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+                                        <div class="image_wrapper"><img class="scale-with-grid" src="Assets/images/Mhartanah-logo-without-bg.png" alt="home_biker_footer_logo" width="100" height="52" />
+                                        </div>
+                                    </div>
+                                    <hr class="no_line" style="margin: 0 auto 20px;" />
+                                    <p style="margin: 0 30% 0 20px;">
+                                        Phasellus faucibus ante sit amet feugiat ultricies. Phasellus efficitur tempor rutrum. Nunc non arcu leo est quam.
+                                    </p>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column one-fourth">
+                            <aside class="widget widget_text">
+                                <h4>Shortcut links</h4>
+                                <div class="textwidget">
+                                    <ul style="line-height: 32px;">
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Aenean sollicitudin</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Duis sed odio sit amet</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Morbi accumsan</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Nam nec tellus </a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Class aptent taciti</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column one-fourth">
+                            <aside class="widget widget_text">
+                                <h4>Contact centre</h4>
+                                <div class="textwidget">
+                                    <p>
+                                        Contact us: +61 (0) 3 8376 6284
+                                        <br> Write us: <a href="mailto:noreply@mHartanah.com">noreply@mHartanah.com</a>
+                                    </p>
+                                    <p>
+                                        Level 13, 2 Elizabeth St,
+                                        <br> Melbourne, Victoria 3000
+                                        <br> Australia
+                                    </p>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>                   
+                </div>
+
+
+                <div class="footer_copy">
+                    <div class="container">
+                        <div class="column one">
+                            <a id="back_to_top" href="#" class="button button_left button_js"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>
+                            <div class="copyright">
+                                &copy; 2017 BeBiker - BeTheme Muffin group - HTML by <a target="_blank" rel="nofollow" href="http://bit.ly/1M6lijQ">BeantownThemes</a>
+                            </div>
+                            <ul class="social">
+                                <li class="facebook">
+                                    <a href="#" title="Facebook"><i class="icon-facebook"></i></a>
+                                </li>
+                                <li class="googleplus">
+                                    <a href="#" title="Google+"><i class="icon-gplus"></i></a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#" title="Twitter"><i class="icon-twitter"></i></a>
+                                </li>
+                                <li class="vimeo">
+                                    <a href="#" title="Vimeo"><i class="icon-vimeo"></i></a>
+                                </li>
+                                <li class="youtube">
+                                    <a href="#" title="YouTube"><i class="icon-play"></i></a>
+                                </li>
+                                <li class="flickr">
+                                    <a href="#" title="Flickr"><i class="icon-flickr"></i></a>
+                                </li>
+                                <li class="instagram">
+                                    <a href="#" title="Instagram"><i class="icon-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+    </form>
+
+<!-- JS -->
+   
+    <script src="Assets/js/jquery-2.1.4.min.js"></script>
+    <script src="Assets/js/ui/jquery-ui.min.js"></script>
+
+    <script src="Assets/js/mfn.menu.js"></script>
+    <script src="Assets/js/jquery.plugins.js"></script>
+    <script src="Assets/js/jquery.jplayer.min.js"></script>
+    <script src="Assets/js/animations/animations.js"></script>
+    <script src="Assets/js/email.js"></script>
+    <script src="Assets/js/scripts.js"></script>
+
+
+    <script>
+        jQuery(window).load(function () {
+            jQuery(".jq-tabs").tabs();
+
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", "images/logo-retina.png").width(retinaLogoW).height(retinaLogoH)
+            }
+        });
+    </script>
+
+</body>
+</html>

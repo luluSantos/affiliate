@@ -1,0 +1,562 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="affiliate.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - MHartanah Affiliate</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <!-- CSS -->
+    <link rel='stylesheet' href='Assets/css/global.css'>
+    <link rel='stylesheet' href='Assets/css/structure.css'>
+    <link rel='stylesheet' href='Assets/css/be_style.css'>
+	<link rel='stylesheet' href='Assets/css/skins/green/stylec721.css'>
+    <link rel='stylesheet' href='Assets/css/custom.css'>
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="Assets/plugins/rs-plugin/css/settings.css">
+
+</head>
+<body class="page-parent template-slider color-blue layout-full-width header-transparent sticky-header sticky-white subheader-title-left">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Main Theme Wrapper -->
+        <div id="Wrapper">
+            <!-- Header Wrapper -->
+            <div id="Header_wrapper">
+                <!-- Header -->
+                <header id="Header">
+                    <!-- Header Top -  Info Area -->
+                    <div id="Action_bar">
+                        <div class="container">
+                            <div class="column one">
+                                <!-- Header - contact info area-->
+                                <ul class="contact_details">
+                                    <li class="slogan">
+                                        Have any questions?
+                                    </li>
+                                    <li class="phone">
+                                        <i class="icon-phone"></i><a href="tel:+61383766284">+61 383 766 284</a>
+                                    </li>
+                                    <li class="mail">
+                                        <i class="icon-mail-line"></i><a href="mailto:noreply@mHartanah.com">noreply@mHartanah.com</a>
+                                    </li>
+                                </ul>
+                                <!--Social info area-->
+                                <ul class="social">
+                                    <li class="skype">
+                                        <a href="#" title="Skype"><i class="icon-skype"></i></a>
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="https://www.facebook.com/Beantown-Themes-653197714728193" title="Facebook"><i class="icon-facebook"></i></a>
+                                    </li>
+                                    <li class="googleplus">
+                                        <a href="https://plus.google.com/" title="Google+"><i class="icon-gplus"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#" title="Twitter"><i class="icon-twitter"></i></a>
+                                    </li>
+                                    <li class="vimeo">
+                                        <a href="https://vimeo.com/" title="Vimeo"><i class="icon-vimeo"></i></a>
+                                    </li>
+                                    <li class="youtube">
+                                        <a href="#" title="YouTube"><i class="icon-play"></i></a>
+                                    </li>
+                                    <li class="flickr">
+                                        <a href="https://www.flickr.com/" title="Flickr"><i class="icon-flickr"></i></a>
+                                    </li>
+                                    <li class="pinterest">
+                                        <a href="https://www.pinterest.com/" title="Pinterest"><i class="icon-pinterest"></i></a>
+                                    </li>
+                                    <li class="dribbble">
+                                        <a href="https://dribbble.com" title="Dribbble"><i class="icon-dribbble"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Header -  Logo and Menu area -->
+                    <div id="Top_bar">
+                        <div class="container">
+                            <div class="column one">
+                                <div class="top_bar_left clearfix">
+                                    <!-- Logo-->
+                                    <div class="logo">
+                                        <a id="logo" href="index.html" title="MHartanah - Affiliate Program"><img class="scale-with-grid" src="Assets/images/Mhartanah-logo-without-bg.png" alt="MHartanah - Affiliate Program" />
+                                        </a>
+                                    </div>
+                                    <!-- Main menu-->
+                                    <div class="menu_wrapper">
+                                        <nav id="menu">
+                                            <ul id="menu-main-menu" class="menu">
+                                                <li id="menuHome" runat="server" class="menu-item">
+                                                    <a href="Default.aspx"><span>Home</span></a>
+                                                </li>
+                                                <li id="menuDashboard" runat="server" class="menu-item">
+                                                    <a href="Dashboard.aspx"><span>Dashboard</span></a>
+                                                </li>
+                                                <li id="menuReferrals" runat="server" class="menu-item">
+                                                    <a href="Referral.aspx"><span>Referrals</span></a>
+                                                </li>
+                                                <li id="menuPerformance" runat="server" class="menu-item">
+                                                    <a href="Performance.aspx"><span>Performance</span></a>
+                                                </li>                                  
+                                                <li id="menuAccount" runat="server" class="menu-item">
+                                                    <a href="Account.aspx"><span>Account</span></a>
+                                                </li>
+                                                <li id="menuContact" runat="server" class="menu-item">
+                                                    <a href="Contact.aspx"><span>Contact Us</span></a>
+                                                </li>
+<%--                                                <li id="menu-item-1584" class="menu-item">
+                                                    <a target="_blank" href="http://bit.ly/1M6lijQ"><span><em class="themecolor"><u>Register Now !</u></em></span></a>
+                                                </li>--%>
+                                            </ul>
+                                        </nav><a class="responsive-menu-toggle" href="#"><i class="icon-menu"></i></a>
+                                    </div>
+                                    <!-- Secondary menu area - only for certain pages -->
+                                    <div class="secondary_menu_wrapper">
+                                        <nav id="secondary-menu" class="menu-secondary-menu-container">
+                                            <ul id="menu-secondary-menu" class="secondary-menu">
+                                                <li id="menu-item-1568" class="menu-item-1568">
+                                                    <a href="#">Home</a>
+                                                </li>
+                                                <li id="menu-item-1573" class="menu-item-1573">
+                                                    <a href="contact.aspx">Contact</a>
+                                                </li>
+                                                <li id="menu-item-1574" class="menu-item-1574">
+                                                    <a href="shop.html">Shop</a>
+                                                    <ul class="sub-menu">
+                                                        <li id="menu-item-1569" class="menu-item-1569">
+                                                            <a href="#">Shopping Cart</a>
+                                                        </li>
+                                                        <li id="menu-item-1570" class="menu-item-1570">
+                                                            <a href="#">Checkout</a>
+                                                        </li>
+                                                        <li id="menu-item-1571" class="menu-item-1571">
+                                                            <a href="#">My Account</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li id="menu-item-1583" class="menu-item-1583">
+                                                    <a target="_blank" href="http://bit.ly/1M6lijQ">Buy it now !</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="top_bar_right">
+                                    <div class="top_bar_right_wrapper">
+                                        <asp:LinkButton runat="server" ID="btnLogin" CssClass="button button_js"><span class="button_label">Sign In <i class="icon-user"></i> </span></asp:LinkButton>
+                                        <asp:LinkButton runat="server" ID="btnLogout" CssClass="button button_js"><span class="button_label">Sign Out <i class="icon-cancel"></i> </span></asp:LinkButton>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Revolution slider area-->
+                <div class="mfn-main-slider" id="mfn-rev-slider">
+                        <div id="rev_slider_34_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container flv_rev_14">
+                            <div id="rev_slider_34_2" class="rev_slider fullwidthabanner flv_rev_13">
+                                <ul>
+                                <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide"
+                                    data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <img src="Assets/images/mhartanah-main-banner.jpg" title="home_internet2_sliderbg" width="1920" height="780" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                    <div class="tp-caption   tp-resizeme" id="slide-1-layer-1" data-x="50" data-y="310" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 13px; line-height: 22px; font-weight: 600; color: #9cdf43; letter-spacing: 0px;font-family:Exo 2;">
+                                        COME JOIN US
+                                    </div>
+                                    <div class="tp-caption   tp-resizeme" id="slide-1-layer-2" data-x="50" data-y="341" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 90px; line-height: 90px; font-weight: 700; color: #ffffff; letter-spacing: 0px;font-family:Exo 2;">
+                                        MHartanah Affliate Program
+                                    </div>
+                                    <div class="tp-caption   tp-resizeme" id="slide-1-layer-3" data-x="50" data-y="460" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 26px; font-weight: 400; color: #d3dadf; letter-spacing: 0px;font-family:Exo 2;">
+                                        Lorem ipsum dolor sit amet elit nibh, ut malesuada id eleifend et,
+                                        <br> erat. Nullam wisi at sollicitudin fermentum metus.
+                                    </div>
+                                    <a class="tp-caption rev-btn tp-resizeme" href="content/internet2/about.html" target="_self" id="slide-1-layer-4" data-x="50" data-y="559" data-width="['auto']" data-height="['auto']" data-type="button" data-actions='' data-responsive_offset="on" data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[17,17,17,17]" data-paddingright="[35,35,35,35]" data-paddingbottom="[17,17,17,17]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; font-size: 17px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Exo 2;background-color:rgb(151,204,2);border-color:rgba(0,0,0,1);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;">Register Now </a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            
+
+            <div id="Content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+                
+            <div class="modal" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;</button>
+                            <h4 class="modal-title" id="ModalTitle">
+                                Sign In</h4>
+                        </div>
+                            <div class="modal-body">
+                                <label for="txtUsername">
+                                    Email</label>
+                                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Enter Email Address" />
+                                <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ControlToValidate="txtUsername" ErrorMessage=" * Please enter your registered email." ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="revUsername" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtUsername" ErrorMessage=" * Invalid Email Format" ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RegularExpressionValidator>
+                                <label for="txtPassword">
+                                    Password</label>
+                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"
+                                    placeholder="Enter Password" />
+                                <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage=" * Password cannot be empty." ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RequiredFieldValidator>
+                                <asp:ValidationSummary runat="server" ID="ValidationSummary1" 
+                                    DisplayMode="List" CssClass="alert-danger"
+                                    ShowMessageBox="False" ShowSummary="True" />
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" ID="btnForgot" target="_self" style="float:left;" data-dismiss="modal" data-toggle="modal" data-target="#ForgotModal">Forgot Password?</a>
+                                <asp:Button ID="btnSubmitLogin" Text="Login" runat="server" Class="button btn-primary" />
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ForgotModal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;</button>
+                            <h4 class="modal-title" id="ModalTitle2">
+                                Forgot Password</h4>
+                        </div>
+                        <div class="modal-body">
+                            <label for="txtFgEMail">
+                                Email Address</label>
+                            <asp:TextBox ID="txtFgEMail" runat="server" CssClass="form-control" placeholder="Enter Email Address" />
+                            <label style="font-size:smaller">If the account exists, a new password will be send to the email.</label>
+                            <br />
+                            <div id="Div1" runat="server" visible="false" class="alert alert-danger">
+                                <strong>Error!</strong>
+                                <asp:Label ID="Label1" runat="server" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <asp:Button ID="Button2" Text="Submit" runat="server" Class="button btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><asp:Label ID="lblLoginModalTitle" runat="server" Text="Sign In Unsuccessful."></asp:Label></h4>
+                        </div>
+                        <div class="modal-body">
+                            <asp:Label ID="lblRegModalMessage" runat="server" Text="* Email/Password incorrect. Please try again." ForeColor="Red"></asp:Label>
+                        </div>
+                        <div class="modal-footer">
+                            <asp:Button ID="btnRegModalOk" runat="server" Text="Ok" data-dismiss="modal"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $("#btnLogin").click(function () {
+                        $('#LoginModal').modal('show');
+                        event.preventDefault();
+                    });
+                });
+                $(document).ready(function () {
+                    function alignModal() {
+                        var modalDialog = $(this).find(".modal-dialog");
+
+                        // Applying the top margin on modal to align it vertically center
+                        modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
+                    }
+                    // Align modal when it is displayed
+                    $(".modal").on("shown.bs.modal", alignModal);
+
+                    // Align modal when user resize the window
+                    $(window).on("resize", function () {
+                        $(".modal:visible").each(alignModal);
+                    });
+                });
+                function showModal() {
+                    $("#myModal").modal('show');
+                }
+            </script>
+                <hr />
+            </div>
+
+            <footer id="Footer" class="clearfix">
+                <div class="widgets_wrapper" style="padding:60px 0;">
+                    <div class="container">
+                        <div class="column one-second">
+                            <aside class="widget widget_text">
+                                <div class="textwidget">
+                                    <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+                                        <div class="image_wrapper"><img class="scale-with-grid" src="Assets/images/Mhartanah-logo-without-bg.png" alt="home_biker_footer_logo" width="100" height="52" />
+                                        </div>
+                                    </div>
+                                    <hr class="no_line" style="margin: 0 auto 20px;" />
+                                    <p style="margin: 0 30% 0 20px;">
+                                        Phasellus faucibus ante sit amet feugiat ultricies. Phasellus efficitur tempor rutrum. Nunc non arcu leo est quam.
+                                    </p>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column one-fourth">
+                            <aside class="widget widget_text">
+                                <h4>Shortcut links</h4>
+                                <div class="textwidget">
+                                    <ul style="line-height: 32px;">
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Aenean sollicitudin</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Duis sed odio sit amet</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Morbi accumsan</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Nam nec tellus </a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-layout" style="color: #afbf00;"></i><a href="#">Class aptent taciti</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column one-fourth">
+                            <aside class="widget widget_text">
+                                <h4>Contact centre</h4>
+                                <div class="textwidget">
+                                    <p>
+                                        Contact us: +61 (0) 3 8376 6284
+                                        <br> Write us: <a href="mailto:noreply@mHartanah.com">noreply@mHartanah.com</a>
+                                    </p>
+                                    <p>
+                                        Level 13, 2 Elizabeth St,
+                                        <br> Melbourne, Victoria 3000
+                                        <br> Australia
+                                    </p>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>                   
+                </div>
+
+
+                <div class="footer_copy">
+                    <div class="container">
+                        <div class="column one">
+                            <a id="back_to_top" href="#" class="button button_left button_js"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>
+                            <div class="copyright">
+                                &copy; 2017 BeBiker - BeTheme Muffin group - HTML by <a target="_blank" rel="nofollow" href="http://bit.ly/1M6lijQ">BeantownThemes</a>
+                            </div>
+                            <ul class="social">
+                                <li class="facebook">
+                                    <a href="#" title="Facebook"><i class="icon-facebook"></i></a>
+                                </li>
+                                <li class="googleplus">
+                                    <a href="#" title="Google+"><i class="icon-gplus"></i></a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#" title="Twitter"><i class="icon-twitter"></i></a>
+                                </li>
+                                <li class="vimeo">
+                                    <a href="#" title="Vimeo"><i class="icon-vimeo"></i></a>
+                                </li>
+                                <li class="youtube">
+                                    <a href="#" title="YouTube"><i class="icon-play"></i></a>
+                                </li>
+                                <li class="flickr">
+                                    <a href="#" title="Flickr"><i class="icon-flickr"></i></a>
+                                </li>
+                                <li class="instagram">
+                                    <a href="#" title="Instagram"><i class="icon-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+    </form>
+
+    <!-- JS -->
+
+    <script src="Assets/js/jquery-2.1.4.min.js"></script>
+
+    <script src="Assets/js/mfn.menu.js"></script>
+    <script src="Assets/js/jquery.plugins.js"></script>
+    <script src="Assets/js/jquery.jplayer.min.js"></script>
+    <script src="Assets/js/animations/animations.js"></script>
+    <script src="Assets/js/email.js"></script>
+    <script src="Assets/js/scripts.js"></script>
+
+    <script src="Assets/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="Assets/plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+
+    <script>
+        var tpj = jQuery;
+        tpj.noConflict();
+        var revapi34;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_34_2").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_34_2");
+            } else {
+                revapi34 = tpj("#rev_slider_34_2").show().revolution({
+                    sliderType: "standard",
+
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 7000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        onHoverStop: "on",
+                        touch: {
+                            touchenabled: "on",
+                            swipe_threshold: 0.7,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "uranus",
+                            enable: true,
+                            hide_onmobile: false,
+                            hide_onleave: false,
+                            tmp: '',
+                            left: {
+                                h_align: "right",
+                                v_align: "bottom",
+                                h_offset: 90,
+                                v_offset: 40
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "bottom",
+                                h_offset: 40,
+                                v_offset: 40
+                            }
+                        },
+                        thumbnails: {
+                            style: "hesperiden",
+                            enable: false,
+                            width: 200,
+                            height: 80,
+                            min_width: 100,
+                            wrapper_padding: 5,
+                            wrapper_color: "transparent",
+                            wrapper_opacity: "1",
+                            tmp: '<span class="tp-thumb-image"></span><span class="tp-thumb-title">Slide</span>',
+                            visibleAmount: 3,
+                            hide_onmobile: true,
+                            hide_under: 0,
+                            hide_onleave: false,
+                            direction: "horizontal",
+                            span: false,
+                            position: "inner",
+                            space: 5,
+                            h_align: "left",
+                            v_align: "bottom",
+                            h_offset: 40,
+                            v_offset: 40
+                        }
+                    },
+                    gridwidth: 1180,
+                    gridheight: 750,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "spinner3",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "on",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    startWithSlide: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "on",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: "off",
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        jQuery(window).load(function() {
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", "Assets/images/logo-retina.png").width(retinaLogoW).height(retinaLogoH)
+            }
+        });
+    </script>
+</body>
+</html>
