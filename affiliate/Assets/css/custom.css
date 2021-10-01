@@ -1,10 +1,4 @@
-.header-transparent #Top_bar .top_bar_right{
-    top:0;
-}
 
-.header-classic #Top_bar .top_bar_right {
-    top: 15px;
-}
 
 #Header_wrapper {
     background-color: #222;

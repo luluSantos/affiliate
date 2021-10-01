@@ -10,7 +10,7 @@
                 <!--BreadCrumbs area-->
                 <ul class="breadcrumbs">
                     <li>
-                        <a href="Default.aspx">Home</a><span><i class="icon-right-open"></i></span>
+                        <a href="Dashboard.aspx">Home</a><span><i class="icon-right-open"></i></span>
                     </li>
                     <li>
                         <a href="Performance.aspx">Performance</a>
@@ -52,7 +52,7 @@
                                                             <i class="icon-flow-branch"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl7clks" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
                                                                 Total Clicks </p>
                                                         </div>
@@ -65,9 +65,9 @@
                                                             <i class="icon-flow-tree"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl7ads" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Referal </p>
+                                                                Total Ads </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -80,7 +80,7 @@
                                                             <i class="icon-flow-branch"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl30clks" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
                                                                 Total Clicks </p>
                                                         </div>
@@ -93,9 +93,9 @@
                                                             <i class="icon-flow-tree"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl30ads" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Referal </p>
+                                                                Total Ads </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -108,7 +108,7 @@
                                                             <i class="icon-flow-branch"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl90clks" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
                                                                 Total Clicks </p>
                                                         </div>
@@ -121,9 +121,9 @@
                                                             <i class="icon-flow-tree"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl90ads" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Referal </p>
+                                                                Total Ads </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -139,7 +139,7 @@
                                     <!-- One full width row-->
                                     <div class="column one-second column_column">
                                         <div class="column_attr ">
-                                            <h5 class="flv_style_4">Details by Month</h5>
+                                            <h5 class="flv_style_4">Details</h5>
                                         </div>
                                     </div>
                                     <div class="column one-second column_column">
@@ -150,12 +150,13 @@
                                     <!-- One Second (1/2) Column -->
                                     <div class="column one column_column">
                                         <div class="column_attr ">
-                                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true" ShowHeaderWhenEmpty="true">
+                                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true" ShowHeaderWhenEmpty="true" >
                                                 <columns>
-                                                    <asp:BoundField DataField="Month" HeaderText="Month" InsertVisible="False" ReadOnly="True" SortExpression="Month" />
-                                                    <asp:BoundField DataField="AdType" HeaderText="Ad Type" InsertVisible="False" ReadOnly="True" SortExpression="UserId" />
-                                                    <asp:BoundField DataField="Clicks" HeaderText="Total Clicks" InsertVisible="False" ReadOnly="True" SortExpression="UserId" />
-                                                    <asp:BoundField DataField="Earning" HeaderText="Earnings" InsertVisible="False" ReadOnly="True" SortExpression="UserId" />
+                                                    <asp:BoundField DataField="Method" HeaderText="Method" InsertVisible="False" ReadOnly="True" SortExpression="Method" />
+                                                    <asp:BoundField DataField="AdsName" HeaderText="Name" InsertVisible="False" ReadOnly="True" SortExpression="AdsName" />
+                                                    <asp:BoundField DataField="CPC/CPL" HeaderText="CPC/CPL" InsertVisible="False" ReadOnly="True" SortExpression="CPC/CPL" />
+                                                    <asp:BoundField DataField="Earning" HeaderText="Earning" InsertVisible="False" ReadOnly="True" SortExpression="Earning" />
+                                                    <asp:BoundField DataField="CreatedDate" HeaderText="Date" InsertVisible="False" ReadOnly="True" SortExpression="CreatedDate" />
                                                 </columns>
                                                 <EmptyDataTemplate>
                                                     <div align="center">No records found.</div>

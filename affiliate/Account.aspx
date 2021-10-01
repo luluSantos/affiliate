@@ -10,7 +10,7 @@
                 <!--BreadCrumbs area-->
                 <ul class="breadcrumbs">
                     <li>
-                        <a href="Default.aspx">Home</a><span><i class="icon-right-open"></i></span>
+                        <a href="Dashboard.aspx">Home</a><span><i class="icon-right-open"></i></span>
                     </li>
                     <li>
                         <a href="Account.aspx">Account</a>
@@ -42,8 +42,8 @@
                                             </div>
                                             
                                             <asp:Panel ID= "pnlEditPersonal"  runat = "server">
-                                                <div class="column one column_column" style="padding-bottom:20px;">
-                                                    <div class="column_attr ">
+                                                <div class="column one column_column" style="padding-bottom:20px">
+                                                    <div class="column_attr">
                                                         <div class="column one-half">
                                                             <label>First Name:</label><span>
                                                                     <asp:TextBox runat="server" ID="txtPFirstName" size="40"></asp:TextBox>
@@ -107,40 +107,40 @@
                                                 </div>
                                             </div>
                                             <div class="column three-fourth column_column">
-                                                <asp:Button runat="server" ID="btnSubmitFinancial" Text="Submit" style="float:right" OnClientClick="return ConfirmSubmit();" />
+                                                <asp:Button runat="server" ID="btnSubmitFinancial" Text="Submit" style="float:right" CausesValidation="true" ValidationGroup="Financial" />
+                                                <asp:Button runat="server" ID="btnEditFinancial" Text="Edit" style="float:right"/>
+                                                <asp:Button runat="server" ID="btnCancelEditFinancial" Text="Cancel" style="float:right" Visible="false"/>
                                             </div>
                                             <asp:Panel ID= "pnlEditFinancial"  runat = "server">
                                                 <div class="column one column_column" style="padding-bottom:20px;">
                                                     <div class="column_attr ">
                                                         <div class="column one">
                                                             <label>Payment method:</label><span>
-                                                                    <asp:RadioButton ID="rbFPaypal" runat="server" Text="" GroupName="paytype" Checked="true" AutoPostBack="true" /><span style="margin:0 5px 0 5px;font-weight: 700;">Paypal</span>
-                                                                    <asp:RadioButton ID="rbFBank" runat="server" Text="" GroupName="paytype" AutoPostBack="true" /><span style="margin:0 5px 0 5px;font-weight: 700;">Bank</span> 
+                                                                    <asp:RadioButton ID="rbFBank" runat="server" Text="" GroupName="paytype" Checked="true" /><span style="margin:0 5px 0 5px;font-weight: 700;">Bank</span> 
 											                    </span>
                                                         </div>
-                                                        <div class="column one-fourth" runat="server" ID="divPaypal" visible="True">
-                                                            <label>Paypal Email:</label><span>
-                                                                    <asp:TextBox runat="server" ID="txtFPaypal" size="40"></asp:TextBox>
-											                    </span>
-                                                        </div>
-                                                        <div class="column one-fourth" runat="server" id="divBank0" visible="false">
+                                                        <div class="column one-fourth" runat="server" id="divBank0" visible="true">
                                                             <label>Bank Name:</label><span>
                                                                     <asp:TextBox runat="server" ID="txtFBank" size="40"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator ID="rfBank" runat="server" ControlToValidate="txtFBank" ErrorMessage="Bank Name cannot be empty." ForeColor="Red" Display="Dynamic" ValidationGroup="Financial"></asp:RequiredFieldValidator>
 											                    </span>
-                                                        </div>
-                                                        <div class="column one-fourth" runat="server" id="divBank1" visible="false">
-                                                            <label>Account Name:</label><span>
-                                                                    <asp:TextBox runat="server" ID="txtFAccount" size="40"></asp:TextBox>
-											                    </span>
-                                                        </div>
-                                                        <div class="column one-fourth" runat="server" id="divBank2" visible="false">
+                                                        </div>                                                        
+                                                        <div class="column one-fourth" runat="server" id="divBank2" visible="true">
                                                             <label>Account Number:</label><span>
                                                                     <asp:TextBox runat="server" ID="txtFAccountNo" size="40"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator ID="rfAccountNo" runat="server" ControlToValidate="txtFAccountNo" ErrorMessage="Account Number cannot be empty." ForeColor="Red" Display="Dynamic" ValidationGroup="Financial"></asp:RequiredFieldValidator>
 											                    </span>
                                                         </div>
-                                                        <div class="column one-fourth" runat="server" id="divBank3" visible="false">
+                                                        <div class="column one-fourth" runat="server" id="divBank1" visible="true">
+                                                            <label>Branch Code:</label><span>
+                                                                    <asp:TextBox runat="server" ID="txtFBranch" size="40"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator ID="rfBranch" runat="server" ControlToValidate="txtFBranch" ErrorMessage="Branch Code cannot be empty." ForeColor="Red" Display="Dynamic" ValidationGroup="Financial"></asp:RequiredFieldValidator>
+											                    </span>
+                                                        </div>
+                                                        <div class="column one-fourth" runat="server" id="divBank3" visible="true">
                                                             <label>Swift Code:</label><span>
                                                                     <asp:TextBox runat="server" ID="txtFSwift" size="40"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator ID="rfSwift" runat="server" ControlToValidate="txtFSwift" ErrorMessage="Swift Code cannot be empty." ForeColor="Red" Display="Dynamic" ValidationGroup="Financial"></asp:RequiredFieldValidator>
 											                    </span>
                                                         </div>
                                                     </div>
@@ -149,14 +149,14 @@
                                             <asp:Panel ID= "pnlDisplayFinancialPaypal"  runat = "server">
                                                 <div class="column one column_column" style="padding-bottom:20px;">
                                                     <div class="column_attr ">
-                                                        <div class="column one">
+                                                        <div class="column one" runat="server" id="div0" visible="false">
                                                             <label>Payment method:</label><span>
-                                                                <asp:Label runat="server" ID="lblFPayment" Text="Paypal"></asp:Label>
+                                                                <asp:Label runat="server" ID="lblFPayment" Text=""></asp:Label>
 											                    </span>
                                                         </div>
-                                                        <div class="column one-fourth" runat="server" ID="div1" visible="True">
+                                                        <div class="column one-fourth" runat="server" ID="div1" visible="false">
                                                             <label>Paypal Email:</label><span>
-                                                                <asp:Label runat="server" ID="lblFEmail" Text="sadasdasd@asdas.sdasd"></asp:Label>
+                                                                <asp:Label runat="server" ID="lblFEmail" Text=""></asp:Label>
 											                    </span>
                                                         </div>
                                                     </div>
@@ -172,22 +172,22 @@
                                                         </div>
                                                         <div class="column one-fourth" runat="server" ID="div3" visible="True">
                                                             <label>Bank Name:</label><span>
-                                                                <asp:Label runat="server" ID="lblFBName" Text="sadasdasd@asdas.sdasd"></asp:Label>
-											                    </span>
-                                                        </div>
-                                                        <div class="column one-fourth" runat="server" id="div2" visible="True">
-                                                            <label>Account Name:</label><span>
-                                                                    <asp:Label runat="server" ID="lblFBAccount" Text="123123123"></asp:Label>
+                                                                <asp:Label runat="server" ID="lblFBName" Text=""></asp:Label>
 											                    </span>
                                                         </div>
                                                         <div class="column one-fourth" runat="server" id="div4" visible="True">
                                                             <label>Bank Account Number:</label><span>
-                                                                    <asp:Label runat="server" ID="lblFBAccountNo" Text="123123123"></asp:Label>
+                                                                    <asp:Label runat="server" ID="lblFBAccountNo" Text=""></asp:Label>
 											                    </span>
                                                         </div>
+                                                        <div class="column one-fourth" runat="server" id="div2" visible="True">
+                                                            <label>Branch Code:</label><span>
+                                                                    <asp:Label runat="server" ID="lblFBBranch" Text=""></asp:Label>
+											                    </span>
+                                                        </div>                                                       
                                                         <div class="column one-fourth" runat="server" id="div5" visible="True">
                                                             <label>Swift Code:</label><span>
-                                                                    <asp:Label runat="server" ID="lblFBSwift" Text="123123123"></asp:Label>
+                                                                    <asp:Label runat="server" ID="lblFBSwift" Text=""></asp:Label>
 											                    </span>
                                                         </div>
                                                     </div>
@@ -201,8 +201,8 @@
                                                 </div>
                                             </div>
                                             <div class="column three-fourth column_column">
-                                                <asp:Button runat="server" ID="btnEditBilling" Text="Edit" style="float:right"/>
-                                                <asp:Button runat="server" ID="btnSubmitBilling" Text="Submit" style="float:right"/>
+                                                <asp:Button runat="server" ID="btnEditBilling" Text="Edit" style="float:right" Visible="false"/>
+                                                <asp:Button runat="server" ID="btnSubmitBilling" Text="Submit" style="float:right" Visible="false"/>
                                                 <asp:Button runat="server" ID="btnEditBillingCancel" Text="Cancel" style="float:right" Visible="false"/>
                                             </div>
 
@@ -211,8 +211,8 @@
                                                     <div class="column_attr ">
                                                         <div class="column one-fourth">
                                                             <label>Account Type:</label><span>
-                                                                    <asp:RadioButton ID="rbBPersonal" runat="server" Text="" GroupName="acctype" Checked="true"/><span style="margin:0 5px 0 5px;font-weight: 700;">Personal</span>
-                                                                    <asp:RadioButton ID="rbBBusiness" runat="server" Text="" GroupName="acctype"/><span style="margin:0 5px 0 5px;font-weight: 700;">Business</span> 
+                                                                    <asp:RadioButton ID="rbBPersonal" runat="server" Text="" GroupName="acctype" Checked="true"/><span style="margin:0 5px 0 0px;font-weight: 700;">Personal</span>
+                                                                    <asp:RadioButton ID="rbBBusiness" runat="server" Text="" GroupName="acctype"/><span style="margin:0 5px 0 0px;font-weight: 700;">Business</span> 
                                                                 </span>
                                                         </div>
                                                         <div class="column one-fourth">
@@ -494,7 +494,6 @@
                                                                         <asp:ListItem Value="260">Zambia (+260)</asp:ListItem>
                                                                         <asp:ListItem Value="255">Zanzibar (+255)</asp:ListItem>
                                                                         <asp:ListItem Value="263">Zimbabwe (+263)</asp:ListItem>
-
                                                                     </asp:DropDownList>
 											                    </span>
                                                         </div>
@@ -530,50 +529,86 @@
                                                     <div class="column_attr ">
                                                         <div class="column one-fourth">
                                                             <label>Account Type:</label><span>
-                                                                    <asp:Label runat="server" ID="lblBAccountType" Text="Personal" size="40"></asp:Label>
+                                                                    <asp:Label runat="server" ID="lblBAccountType" Text="" size="40"></asp:Label>
                                                                 </span>
                                                         </div>
                                                         <div class="column one-fourth">
                                                             <label>Nationality:</label><span>
-                                                                    <asp:Label runat="server" ID="lblBNationality" Text="Malaysian" size="40"></asp:Label>
+                                                                    <asp:Label runat="server" ID="lblBNationality" Text="" size="40"></asp:Label>
 											                    </span>
                                                         </div> 
                                                         <div class="column one-fourth">
                                                             <label>ID Type:</label><span>
-                                                                <asp:Label runat="server" ID="lblBIDtype" Text="Identity Card" size="40"></asp:Label>
+                                                                <asp:Label runat="server" ID="lblBIDtype" Text="" size="40"></asp:Label>
 											                    </span>
                                                         </div>
                                                         <div class="column one-fourth">
                                                             <label>ID Number:</label><span>
-                                                                    <asp:Label runat="server" ID="lblBIDNumber" Text="xxx" size="40"></asp:Label>
+                                                                    <asp:Label runat="server" ID="lblBIDNumber" Text="" size="40"></asp:Label>
 											                    </span>
                                                         </div>
 
                                                         <div class="column one-fourth">
                                                             <label>Country Code:</label><span>
-                                                                    <asp:Label runat="server" ID="lblBCountryCode" Text="??" size="40"></asp:Label>
+                                                                    <asp:Label runat="server" ID="lblBCountryCode" Text="" size="40"></asp:Label>
 											                    </span>
                                                         </div>
                                                         <div class="column one-fourth">
                                                             <label>Phone Number:</label><span>
-                                                                    <asp:Label runat="server" ID="lblBPhone" Text="012" size="40"></asp:Label>
+                                                                    <asp:Label runat="server" ID="lblBPhone" Text="" size="40"></asp:Label>
 											                    </span>
                                                         </div> 
                                                         <div class="column one-fourth">
                                                             <label>Gender:</label><span>
-                                                                    <asp:Label runat="server" ID="lblBGender" Text="Male" size="40"></asp:Label>
+                                                                    <asp:Label runat="server" ID="lblBGender" Text="" size="40"></asp:Label>
 											                    </span>
                                                         </div>
                                                         <div class="column one-fourth">
                                                             <label>Date of Birth:</label><span>
-												                    <asp:Label runat="server" ID="lblBBirthday" Text="Today" size="40"></asp:Label>                                                                    
+												                    <asp:Label runat="server" ID="lblBBirthday" Text="" size="40"></asp:Label>                                                                    
 											                    </span>
                                                         </div>
                                                         <div class="column one">
                                                             <label>Billing Address:</label><span>
-												                    <asp:Label runat="server" ID="lblBAddress" Text="asdasdas"></asp:Label>
+												                    <asp:Label runat="server" ID="lblBAddress" Text=""></asp:Label>
 											                    </span>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </asp:Panel>
+
+                                             <hr />
+
+                                            <div class="column one-fourth column_column">
+                                                <div class="column_attr ">
+                                                    <h5 class="flv_style_4">Change Password</h5>
+                                                </div>
+                                            </div>
+                                            <div class="column three-fourth column_column">
+                                                <asp:Button runat="server" ID="btnSubmitNewPassword" Text="Submit" style="float:right" CausesValidation="true" ValidationGroup="Password"/>
+                                            </div>
+                                            <asp:Panel ID= "Panel1"  runat = "server">
+                                                <div class="column one column_column" style="padding-bottom:20px;">
+                                                    <div class="column_attr ">
+                                                        <div class="column one-fourth" runat="server" id="div8" visible="true">
+                                                            <label>Old Password:</label><span>
+                                                                    <asp:TextBox runat="server" ID="txtOldPassword" TextMode="Password" size="40"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator ID="rfvOldPassword" runat="server" ControlToValidate="txtOldPassword" ErrorMessage="Old password cannot be empty." ForeColor="Red" Display="Dynamic" ValidationGroup="Password"></asp:RequiredFieldValidator>
+											                    </span>
+                                                        </div>
+                                                        <div class="column one-fourth" runat="server" id="div6" visible="true">
+                                                            <label>New Password:</label><span>
+                                                                    <asp:TextBox runat="server" ID="txtNewPassword" TextMode="Password" size="40"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator ID="rfvNewPassword" runat="server" ControlToValidate="txtNewPassword" ErrorMessage="Password cannot be empty." ForeColor="Red" Display="Dynamic" ValidationGroup="Password"></asp:RequiredFieldValidator>
+                                                                    <asp:RegularExpressionValidator ID="revNewPassword" runat="server" ValidationExpression="^.*(?=.{8,})(?=.*[\d]).*$" ControlToValidate="txtNewPassword" ErrorMessage="Password must be alphanumerical and contain at least 8 characters." ForeColor="Red" Display="Dynamic" ValidationGroup="Password"></asp:RegularExpressionValidator>
+											                    </span>
+                                                        </div>                                                        
+                                                        <div class="column one-fourth" runat="server" id="div7" visible="true">
+                                                            <label>Confirm New Password:</label><span>
+                                                                    <asp:TextBox runat="server" ID="txtNewPassword2" TextMode="Password" size="40"></asp:TextBox>
+                                                                    <asp:CompareValidator runat="server" id="cmpPassword2" controltovalidate="txtNewPassword2" controltocompare="txtNewPassword" operator="Equal" type="String" errormessage="The password is not same." ForeColor="Red" Display="Dynamic" ValidationGroup="Password"/><br />
+											                    </span>
+                                                        </div>                                                       
                                                     </div>
                                                 </div>
                                             </asp:Panel>
@@ -601,7 +636,6 @@
                                 <Triggers>
                                     <asp:AsyncPostBackTrigger ControlID="btnSubmitBilling" EventName="Click"/>
                                     <asp:AsyncPostBackTrigger ControlID="btnSubmitFinancial" EventName="Click"/>
-                                    <asp:AsyncPostBackTrigger ControlID="rbFPaypal" EventName="CheckedChanged" />
                                     <asp:AsyncPostBackTrigger ControlID="rbFBank" EventName="CheckedChanged" />
                                 </Triggers>
                             </asp:UpdatePanel>

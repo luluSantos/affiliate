@@ -14,6 +14,60 @@ Option Explicit On
 Partial Public Class Performance
 
     '''<summary>
+    '''lbl7clks control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl7clks As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lbl7ads control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl7ads As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lbl30clks control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl30clks As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lbl30ads control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl30ads As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lbl90clks control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl90clks As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lbl90ads control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl90ads As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''btnExport control.
     '''</summary>
     '''<remarks>

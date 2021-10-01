@@ -1,35 +1,36 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Redirect
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Dim mhaUserID As String = Request.QueryString("x")
-        If Not String.IsNullOrEmpty(mhaUserID) Then
-            mhaUserID = ConvertHexToString(mhaUserID)
-        Else
-            Exit Sub
+        Dim afid As String = Request.QueryString("afid")
+        Dim adsid As String = Request.QueryString("aid")
+        Dim type As String = Request.QueryString("typ")
+        Dim target As String = HttpUtility.UrlDecode(Request.QueryString("target"))
+        If Not String.IsNullOrEmpty(afid) Then
+            afid = ConvertHexToString(afid)
         End If
-        InsertRecord(mhaUserID)
-        'Response.Redirect("UserDetail.aspx")
+
+        InsertRecord(afid, adsid, type, target)
+        Response.Redirect(target)
     End Sub
 
-    Protected Sub InsertRecord(ByVal mhaUserID As String)
+    Protected Sub InsertRecord(ByVal afid As String, ByVal AdsID As String, ByVal type As String, ByVal target As String)
 
-        Dim sqlConn As New SqlConnection(ConfigurationManager.ConnectionStrings("mhaDB").ConnectionString)
-        Dim sqlQuery As String = "INSERT INTO mhaRecords (mhaUserID,mhaRecIP,mhaRecCountry,mhaRecCity,mhaRecType,mhaRecTimeStamp) VALUES (@mhaUserID,@mhaRecIP,@mhaRecCountry,@mhaRecCity,@mhaRecType,@mhaRecTimeStamp)"
+        Dim sqlConn As New MySqlConnection(ConfigurationManager.ConnectionStrings("mhaDB").ConnectionString)
+        Dim sqlQuery As String = "INSERT INTO mm_af_adsrecords (AFID,AdsID,Method,adsrIP,CreatedDate) VALUES (@AFID,@AdsID,@Method,@adsrIP,@CreatedDate)"
         Dim returnResult As Integer = 0
 
         Dim mhaRecIP = GetIPAddress()
 
         Try
-            Using sqlCmd As New SqlCommand(sqlQuery, sqlConn)
-                sqlCmd.Parameters.AddWithValue("@mhaUserID", mhaUserID)
-                sqlCmd.Parameters.AddWithValue("@mhaRecIP", mhaRecIP)
-                sqlCmd.Parameters.AddWithValue("@mhaRecCountry", DBNull.Value)
-                sqlCmd.Parameters.AddWithValue("@mhaRecCity", DBNull.Value)
-                sqlCmd.Parameters.AddWithValue("@mhaRecType", DBNull.Value)
-                sqlCmd.Parameters.AddWithValue("@mhaRecTimeStamp", DateTime.Now)
+            Using sqlCmd As New MySqlCommand(sqlQuery, sqlConn)
+                sqlCmd.Parameters.AddWithValue("@AFID", afid)
+                sqlCmd.Parameters.AddWithValue("@AdsID", AdsID)
+                sqlCmd.Parameters.AddWithValue("@Method", type)
+                sqlCmd.Parameters.AddWithValue("@adsrIP", mhaRecIP)
+                sqlCmd.Parameters.AddWithValue("@CreatedDate", DateTime.Now)
                 sqlConn.Open()
                 returnResult = sqlCmd.ExecuteNonQuery()
                 sqlConn.Close()
@@ -42,7 +43,7 @@ Public Class Redirect
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
         Finally
             If sqlConn.State = ConnectionState.Open Then
                 sqlConn.Close()

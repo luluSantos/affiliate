@@ -23,6 +23,42 @@ Partial Public Class Referral
     Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
 
     '''<summary>
+    '''ddlTargetPage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlTargetPage As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''hypTargetPage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hypTargetPage As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''txtTextAdsName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtTextAdsName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''lnkbGenerateTextLink control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lnkbGenerateTextLink As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''btnCopyTextLink control.
     '''</summary>
     '''<remarks>
@@ -41,29 +77,119 @@ Partial Public Class Referral
     Protected WithEvents lblTextLink As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''UpdatePanel2 control.
+    '''UpdatePanel3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UpdatePanel2 As Global.System.Web.UI.UpdatePanel
+    Protected WithEvents UpdatePanel3 As Global.System.Web.UI.UpdatePanel
 
     '''<summary>
-    '''btnCopyBannerLink control.
+    '''ddldyntarget1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnCopyBannerLink As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ddldyntarget1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''lblBannerCode control.
+    '''hypdyn1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblBannerCode As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents hypdyn1 As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''ddldyntarget2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddldyntarget2 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''hypdyn2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hypdyn2 As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''ddldyntarget3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddldyntarget3 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''hypdyn3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hypdyn3 As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''txtDynAdsName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtDynAdsName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''lnkbGenerateDynLink control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lnkbGenerateDynLink As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''btnCopyDynLink control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCopyDynLink As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblDynLink control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblDynLink As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''pnldisplaydemo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents pnldisplaydemo As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''ltliFrame control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ltliFrame As Global.System.Web.UI.WebControls.Literal
 End Class

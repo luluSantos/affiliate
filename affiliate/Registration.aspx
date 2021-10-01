@@ -9,10 +9,10 @@
                 <!--BreadCrumbs area-->
                 <ul class="breadcrumbs">
                     <li>
-                        <a href="index.html">Home</a><span><i class="icon-right-open"></i></span>
+                        <a href="Default.aspx">Home</a><span><i class="icon-right-open"></i></span>
                     </li>
                     <li>
-                        <a href="contact.html">Registration</a>
+                        <a href="Registration.aspx">Registration</a>
                     </li>
                 </ul>
             </div>
@@ -30,7 +30,7 @@
                                     <div class="flv_style_11">
                                         <h2>Register Here.</h2>
                                         <p>
-                                            <span class="big">If you got any questions, please do not hesitate to send us a message. We reply within <span class="tooltip" data-tooltip="Mon-Fri 8:00am-6:00pm (GMT +1)" >24 hours</span> !</span>
+                                            <span class="big"></span>
                                         </p>
                                     </div>
                                 </div>

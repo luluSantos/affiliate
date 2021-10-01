@@ -11,113 +11,122 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Dashboard
+Partial Public Class DynamicWidget
 
     '''<summary>
-    '''lblDashboardWelcome control.
+    '''form1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblDashboardWelcome As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''lblDashboardWelcome2 control.
+    '''hyp0 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblDashboardWelcome2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents hyp0 As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''lblaqclks control.
+    '''img0 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblaqclks As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents img0 As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''lblcl control.
+    '''text0 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblcl As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents text0 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblcb control.
+    '''title0 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblcb As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents title0 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblRecentpay control.
+    '''hyp1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblRecentpay As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents hyp1 As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''lbl7clks control.
+    '''img1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl7clks As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents img1 As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''lbl7ads control.
+    '''text1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl7ads As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents text1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lbl30clks control.
+    '''title1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl30clks As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents title1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lbl30ads control.
+    '''hyp2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl30ads As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents hyp2 As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''lbl90clks control.
+    '''img2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl90clks As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents img2 As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''lbl90ads control.
+    '''text2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl90ads As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents text2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''title2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents title2 As Global.System.Web.UI.WebControls.Label
 End Class

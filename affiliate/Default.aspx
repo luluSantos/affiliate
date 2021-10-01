@@ -97,7 +97,7 @@
                                 </div>
                             </div>
                         </div>
-                <div class="section dark flv_section">
+                <%--<div class="section dark flv_section">
                             <div class="section_wrapper clearfix">
                                 <div class="items_group clearfix">
                                     <!-- Page Title-->
@@ -224,7 +224,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
                         <div class="section flv_sections_7">
                             <div class="section_wrapper clearfix">
                                 <div class="items_group clearfix">

@@ -11,113 +11,95 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Dashboard
+Partial Public Class Withdrawal
 
     '''<summary>
-    '''lblDashboardWelcome control.
+    '''btnExport control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblDashboardWelcome As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnExport As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''lblDashboardWelcome2 control.
+    '''gvWR control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblDashboardWelcome2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents gvWR As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''lblaqclks control.
+    '''txtName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblaqclks As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''lblcl control.
+    '''txtAmountAv control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblcl As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtAmountAv As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''lblcb control.
+    '''ddlWithdrawalReqAmount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblcb As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ddlWithdrawalReqAmount As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''lblRecentpay control.
+    '''txtAFRemark control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblRecentpay As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtAFRemark As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''lbl7clks control.
+    '''btnSubmitWRequest control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl7clks As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnSubmitWRequest As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''lbl7ads control.
+    '''lblWModalTitle control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl7ads As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblWModalTitle As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lbl30clks control.
+    '''lblWModalMessage control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl30clks As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblWModalMessage As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lbl30ads control.
+    '''btnWModalOk control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl30ads As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lbl90clks control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbl90clks As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lbl90ads control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbl90ads As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnWModalOk As Global.System.Web.UI.WebControls.Button
 End Class

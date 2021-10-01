@@ -97,7 +97,7 @@
                                         <div style="padding: 20px;min-height: 75px;">
                                             <div class="column one-second "><h5>Affiliate Level</h5>
                                                 </div>
-                                            <div class="column one-second "><span style="color:black">Acquired Clicks :<asp:Label runat="server" Font-Size="Large" Text=" 12/100"></asp:Label></span><br /><span style="color:black">Current Level : <asp:Label runat="server" Font-Size="Large" Text=" 1"></asp:Label></span><br /><span style="float:right;""><a href="#"><i class="icon-forward"></i>More</a></span>
+                                            <div class="column one-second "><span style="color:black">Acquired Clicks :<asp:Label runat="server" ID="lblaqclks" Font-Size="Large" Text=" 12/100"></asp:Label></span><br /><span style="color:black">Current Level : <asp:Label runat="server" ID="lblcl" Font-Size="Large" Text=" 1"></asp:Label></span><br /><span style="float:right;""><a href="Affiliate.aspx"><i class="icon-forward"></i>More</a></span>
                                                 </div>                                           
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@
                                         <div style="padding: 20px;min-height: 75px;">
                                             <div class="column one-second "><h5>Earnings</h5>
                                                 </div>
-                                            <div class="column one-second "><span style="color:black">Current Balance :<asp:Label runat="server" Font-Size="Large" Text=" RM 12"></asp:Label></span><br /><span style="color:black">Most Recent Payment : <asp:Label runat="server" Font-Size="Large" Text=" RM 12"></asp:Label></span><br /><span style="float:right;""><a href="#"><i class="icon-forward"></i>Withdrawal</a></span>
+                                            <div class="column one-second "><span style="color:black">Current Balance :<asp:Label runat="server" ID="lblcb" Font-Size="Large" Text=" RM 12"></asp:Label></span><br /><span style="color:black">Most Recent Payment : <asp:Label runat="server" ID="lblRecentpay" Font-Size="Large" Text=" RM 12" ></asp:Label></span><br /><span style="float:right;""><a href="Withdrawal.aspx"><i class="icon-forward"></i>Withdrawal</a></span>
                                                 </div>                                            
                                         </div>
                                     </div>                                  
@@ -142,9 +142,9 @@
                                                             <i class="icon-flow-branch"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:Label runat="server" id="lbl7clks" class="number" data-to="0">0</asp:Label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Clicks </p>
+                                                                Total Clicks Acquired</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -155,9 +155,9 @@
                                                             <i class="icon-flow-tree"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl7ads" class="number">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Referal </p>
+                                                                Total Ads Generated</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -170,9 +170,9 @@
                                                             <i class="icon-flow-branch"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl30clks" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Clicks </p>
+                                                                Total Clicks Acquired</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -183,9 +183,9 @@
                                                             <i class="icon-flow-tree"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl30ads" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Referal </p>
+                                                                Total Ads Generated</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -198,9 +198,9 @@
                                                             <i class="icon-flow-branch"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl90clks" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Clicks </p>
+                                                                Total Clicks Acquired</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -211,9 +211,9 @@
                                                             <i class="icon-flow-tree"></i> </div>
                                                         <div class="desc_wrapper">
                                                             <div class="number-wrapper">
-                                                                <span class="number" data-to="0">0</span> </div>
+                                                                <asp:label runat="server" ID="lbl90ads" class="number" data-to="0">0</asp:label> </div>
                                                             <p class="title" style="color:black;">
-                                                                Total Referal </p>
+                                                                Total Ads Generated</p>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -149,6 +149,24 @@ Partial Public Class Account
     Protected WithEvents btnSubmitFinancial As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''btnEditFinancial control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnEditFinancial As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnCancelEditFinancial control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCancelEditFinancial As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''pnlEditFinancial control.
     '''</summary>
     '''<remarks>
@@ -158,15 +176,6 @@ Partial Public Class Account
     Protected WithEvents pnlEditFinancial As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''rbFPaypal control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rbFPaypal As Global.System.Web.UI.WebControls.RadioButton
-
-    '''<summary>
     '''rbFBank control.
     '''</summary>
     '''<remarks>
@@ -174,24 +183,6 @@ Partial Public Class Account
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rbFBank As Global.System.Web.UI.WebControls.RadioButton
-
-    '''<summary>
-    '''divPaypal control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents divPaypal As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''txtFPaypal control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtFPaypal As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''divBank0 control.
@@ -212,22 +203,13 @@ Partial Public Class Account
     Protected WithEvents txtFBank As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''divBank1 control.
+    '''rfBank control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents divBank1 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''txtFAccount control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtFAccount As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents rfBank As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''divBank2 control.
@@ -248,6 +230,42 @@ Partial Public Class Account
     Protected WithEvents txtFAccountNo As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''rfAccountNo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfAccountNo As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''divBank1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents divBank1 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''txtFBranch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtFBranch As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''rfBranch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfBranch As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''divBank3 control.
     '''</summary>
     '''<remarks>
@@ -266,6 +284,15 @@ Partial Public Class Account
     Protected WithEvents txtFSwift As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''rfSwift control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfSwift As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''pnlDisplayFinancialPaypal control.
     '''</summary>
     '''<remarks>
@@ -273,6 +300,15 @@ Partial Public Class Account
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlDisplayFinancialPaypal As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''div0 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents div0 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''lblFPayment control.
@@ -338,24 +374,6 @@ Partial Public Class Account
     Protected WithEvents lblFBName As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''div2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents div2 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''lblFBAccount control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblFBAccount As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''div4 control.
     '''</summary>
     '''<remarks>
@@ -372,6 +390,24 @@ Partial Public Class Account
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblFBAccountNo As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''div2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents div2 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''lblFBBranch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblFBBranch As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''div5 control.
@@ -606,6 +642,114 @@ Partial Public Class Account
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblBAddress As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''btnSubmitNewPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSubmitNewPassword As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Panel1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''div8 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents div8 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''txtOldPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtOldPassword As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''rfvOldPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfvOldPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''div6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents div6 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''txtNewPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtNewPassword As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''rfvNewPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfvNewPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''revNewPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents revNewPassword As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+    '''<summary>
+    '''div7 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents div7 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''txtNewPassword2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtNewPassword2 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''cmpPassword2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cmpPassword2 As Global.System.Web.UI.WebControls.CompareValidator
 
     '''<summary>
     '''lblRegModalTitle control.
